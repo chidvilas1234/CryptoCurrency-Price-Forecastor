@@ -58,6 +58,7 @@ def get_data(ticker):
     y= np.array(data[str(n_days)+'_Day_Price_Forecast'])
     y= y[:-n_days]
     return X,y
+   
 
 X, y= get_data(selected_currency)
 
@@ -98,7 +99,7 @@ if st.button("Predict future Prices"):
     plot_result_data()
 if st.button("Accuracy check"):
     st.write(p*100)
-if st.button('INR CONVERTER'):
+if st.button('INR CONVERTER : convert to indian rupees'):
     st.write(m*83.05)
     st.write(f'''
         <a target="_blank" href="https://www.coinbase.com/learn/crypto-basics">
